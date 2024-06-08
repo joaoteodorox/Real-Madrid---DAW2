@@ -1,0 +1,48 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    padding: 20px;
+}
+
+.content {
+    margin-top: 20px;
+}
+
+.content input[type="text"],
+.content input[type="number"] {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    border: 1px solid #120e0e;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.content input[type="radio"] {
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+
+.content label {
+    margin-right: 10px;
+}
+
+.content span.legend {
+    color: #777;
+}
+
+hr {
+    margin-top: 10px;
+    margin-bottom: 20px;
+    border: none;
+    border-top: 1px solid #ccc;
+}
+.link {
+    margin-top: 20px;
+}
+
+.link a {
+    text-decoration: none; 
+}

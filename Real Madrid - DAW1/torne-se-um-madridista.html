@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Torne-se um Madridista</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/png" href="real madrid.png"> 
+    <style>
+        /* Estilos CSS aqui */
+    </style>
+</head>
+<body>
+    <form action="#" method="post">
+        <a href="Real Madrid.html">Voltar</a>
+        <hr>
+        <h1>Torne-se um Madridista</h1>
+        <br>
+        <div class="content">
+            Cadastre-se para fazer parte do Real Madrid.
+        </div>
+        <br>
+        <div class="content">
+            Escreva seu nome:
+        </div>
+        <br>
+        <div class="content">
+            <input type="text" minlength="4" maxlength="99" name="nome" id="nome" required>
+        </div>
+        <br>
+        <div class="content">
+            Insira sua data de nascimento:
+        </div>
+        <br>
+        <div class="content">
+            <input type="date" name="data_nascimento" id="data_nascimento" required>
+        </div>
+        <br>
+        <div class="content">
+            Selecione seu país:
+        </div>
+        <br>
+        <div class="content">
+            <select name="pais" id="pais" onchange="showFields()" required>
+                <option value="">Selecione um país</option>
+                <option value="brasil">Brasil</option>
+                <option value="estadosunidos">Estados Unidos</option>
+                <option value="espanha">Espanha</option>
+                <option value="franca">França</option>
+                <!-- Adicione mais opções de países aqui -->
+            </select>
+        </div>
+        <br>
+        <div class="content" id="brasilFields" style="display: none;">
+            Insira seu CEP:<br>
+            <input type="text" name="cep" id="cep" required><br><br>
+            Estado:<br>
+            <input type="text" name="estado" id="estado" required><br><br>
+            Cidade:<br>
+            <input type="text" name="cidade" id="cidade" required>
+        </div>
+        <div class="content" id="usaFields" style="display: none;">
+            Insira seu Código Postal:<br>
+            <input type="text" name="codigo_postal" id="codigo_postal" required><br><br>
+            Estado:<br>
+            <input type="text" name="estado_usa" id="estado_usa" required><br><br>
+            Cidade:<br>
+            <input type="text" name="cidade_usa" id="cidade_usa" required>
+        </div>
+        <div class="content" id="franceFields" style="display: none;">
+            Insira seu Código Postal:<br>
+            <input type="text" name="codigo_postal_fr" id="codigo_postal_fr" required><br><br>
+            Estado:<br>
+            <input type="text" name="estado_fr" id="estado_fr" required><br><br>
+            Cidade:<br>
+            <input type="text" name="cidade_fr" id="cidade_fr" required>
+        </div>
+        <div class="content" id="spainFields" style="display: none;">
+            Insira seu Código Postal:<br>
+            <input type="text" name="codigo_postal_es" id="codigo_postal_es" required><br><br>
+            Estado:<br>
+            <input type="text" name="estado_es" id="estado_es" required><br><br>
+            Cidade:<br>
+            <input type="text" name="cidade_es" id="cidade_es" required>
+        </div>
+        <!-- Adicione mais divs para outros países -->
+        <br>
+        <div class="content">
+            Selecione seu sexo:
+        </div>
+        <br>
+        <div class="content">
+            <label for="sexoM">Masculino</label>
+            <input type="radio" id="sexoM" name="sexo" value="masculino">
+            <label for="sexoF">Feminino</label>
+            <input type="radio" id="sexoF" name="sexo" value="feminino">
+        </div>
+        <br>
+        <div class="content">
+            Selecione seu plano de sócio-torcedor:
+        </div>
+        <br>
+        <div class="content">
+            <!-- Opções do plano aqui -->
+        </div>
+        <br>
+        <h3>Tabela de Preço Sócio Torcedor Madridistas</h3>
+        <table>
+            <tr>
+                <th>Plano</th>
+                <th>Preço</th>
+            </tr>
+            <tr>
+                <td>Madridista Normal</td>
+                <td>$25</td>
+            </tr>
+            <tr>
+                <td>Madridista Premium</td>
+                <td>$50</td>
+            </tr>
+            <tr>
+                <td>Madridista Ultra</td>
+                <td>$100</td>
+            </tr>
+        </table>
+        <hr>
+        <input type="submit" name="Cadastrar" value="Cadastrar">
+
+        <script>
+            function showFields() {
+                var pais = document.getElementById("pais").value;
+                if (pais === "brasil") {
+                    document.getElementById("brasilFields").style.display = "block";
+                    document.getElementById("usaFields").style.display = "none";
+                    document.getElementById("franceFields").style.display = "none";
+                    document.getElementById("spainFields").style.display = "none";
+                } else if (pais === "estadosunidos") {
+                    document.getElementById("brasilFields").style.display = "none";
+                    document.getElementById("usaFields").style.display = "block";
+                    document.getElementById("franceFields").style.display = "none";
+                    document.getElementById("spainFields").style.display = "none";
+                } else if (pais === "espanha") {
+                    document.getElementById("brasilFields").style.display = "none";
+                    document.getElementById("usaFields").style.display = "none";
+                    document.getElementById("franceFields").style.display = "none";
+                    document.getElementById("spainFields").style.display = "block";
+                } else if (pais === "franca") {
+                    document.getElementById("brasilFields").style.display = "none";
+                    document.getElementById("usaFields").style.display = "none";
+                    document.getElementById("franceFields").style.display = "block";
+                    document.getElementById("spainFields").style.display = "none";
+                }
+            }
+        </script>
+    </form>
+</body>
+
